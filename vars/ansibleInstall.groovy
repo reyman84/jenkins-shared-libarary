@@ -1,5 +1,5 @@
-def call () {
-    node {
+def call() {
+    sh """
         echo "Checking Ansible installation..."
         
         if command -v ansible >/dev/null 2>&1; then
@@ -13,5 +13,5 @@ def call () {
         fi
         echo "Installed Ansible Version:"
         ansible --version
-    }
+    """
 }
