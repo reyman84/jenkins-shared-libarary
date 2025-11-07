@@ -1,11 +1,12 @@
 def call() {
+    node {
     sh """
         echo "Checking Ansible installation..."
         
         if command -v ansible >/dev/null 2>&1; then
             echo "Ansible is already installed."
         else
-            echo "⏳ Installing Ansible..."
+            echo "Installing Ansible..."
             sudo apt update -y
             sudo apt install software-properties-common -y
             sudo add-apt-repository --yes --update ppa:ansible/ansible
@@ -14,4 +15,5 @@ def call() {
         echo "Installed Ansible Version:"
         ansible --version
     """
+    }
 }
