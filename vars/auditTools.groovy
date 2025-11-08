@@ -2,7 +2,7 @@ def call() {
     sh """
         mvn --version; 
         java -version
-        jenkins --version
+        #jenkins --version
         git --version
         ansible --version
     """
