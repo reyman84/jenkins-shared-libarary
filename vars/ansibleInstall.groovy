@@ -1,5 +1,4 @@
 def call() {
-    node {
     sh """
         echo "Checking Ansible installation..."
         
@@ -15,5 +14,4 @@ def call() {
         echo "Installed Ansible Version:"
         ansible --version
     """
-    }
 }

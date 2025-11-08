@@ -1,7 +1,5 @@
 def call(String sonarServer, String scannerHome) {
-
     withSonarQubeEnv(sonarServer) {
-
         sh """
             ${scannerHome}/bin/sonar-scanner \
             -Dsonar.projectKey=vprofile \
